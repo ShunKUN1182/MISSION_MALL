@@ -1,0 +1,12 @@
+:root {
+    --mainColor: #fff8e7;
+    --bgColor: #1f1f1f;
+    --textboxColor: #626262;
+    --whiteColor: #f6f6f6;
+    --goodColor: #2bff88;
+    --badColor: #ff4fa3;
+    --blockColor: #000;
+    --modeBtnColor: #ffd400;
+    --bgSuccessColor: rgba(31, 31, 31, 0.7);
+    --grayColor: #d9d9d9;
+}
