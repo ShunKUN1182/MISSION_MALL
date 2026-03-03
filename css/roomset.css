@@ -2,7 +2,7 @@
 .room_text_wrap{
     display: flex;
     align-items: center;
-    margin: 45px auto 40px 30px;
+    margin: 30px auto 32px 30px;
     gap: 16px;
     .returm_btn{
         display: flex;
@@ -56,7 +56,7 @@
 }
 
 .rink_btn{
-    margin: 32px 30px;
+    margin: 16px 30px 30px;
     height: 42px;
     border-radius: 16px;
     display: flex;
