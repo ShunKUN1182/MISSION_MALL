@@ -100,25 +100,53 @@ function startMissionList() {
     );
 }
 
-function missionChange(e) {}
+function missionChange(e) {
+    const randomNum = Math.floor(Math.random() * missionLists.length);
+    e.innerHTML = `
+            <p>${missionLists[randomNum].pt}pt</p>
+            <p>${missionLists[randomNum].contents}</p>
+        `;
+}
 
 startMissionList();
 const changeBtn = document.querySelectorAll(".change_btn");
 const missionListBtn = document.querySelectorAll(".mission_list");
+const myPoint = document.querySelector("#myPoint");
+const maxScoreInput = document.querySelector("#maxScoreInput");
+const maxScore = 20;
+let pointCounter = 0;
 console.log(changeBtn);
 
+maxScoreInput.textContent = maxScore;
+
 missionListBtn.forEach((e) => {
+    let count = 0;
     e.addEventListener("click", (ele) => {
-        console.log(e, ele);
+        if (count == 1) {
+            return;
+        }
+        count = 1;
+        let pointNum = e.querySelector("p").textContent;
+        pointNum = pointNum.split("p");
+        pointNum = Number(pointNum[0]);
+        pointCounter += pointNum;
+        console.log(pointCounter);
+        myPoint.textContent = pointCounter;
+        if (pointCounter >= maxScore) {
+            alert("ゲーム終了だよ！");
+        }
         e.classList.add("mission_complete");
         setTimeout(() => {
             e.classList.remove("mission_complete");
-        }, 700);
+            missionChange(e);
+            count = 0;
+        }, 1000);
     });
 });
 
 changeBtn.forEach((e) => {
     e.addEventListener("click", () => {
-        console.log(e);
+        const childEle = e.parentElement.querySelector("div");
+        missionChange(childEle);
     });
 });
