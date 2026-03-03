@@ -111,15 +111,22 @@ function missionChange(e) {
 startMissionList();
 const changeBtn = document.querySelectorAll(".change_btn");
 const missionListBtn = document.querySelectorAll(".mission_list");
+const myPoint = document.querySelector("#myPoint");
 console.log(changeBtn);
 
 missionListBtn.forEach((e) => {
+    let count = 0;
     e.addEventListener("click", (ele) => {
+        if (count == 1) {
+            return;
+        }
+        count = 1;
         console.log(e, ele);
         e.classList.add("mission_complete");
         setTimeout(() => {
             e.classList.remove("mission_complete");
             missionChange(e);
+            count = 0;
         }, 1000);
     });
 });
