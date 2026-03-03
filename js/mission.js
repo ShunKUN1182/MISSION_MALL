@@ -100,7 +100,13 @@ function startMissionList() {
     );
 }
 
-function missionChange(e) {}
+function missionChange(e) {
+    const randomNum = Math.floor(Math.random() * missionLists.length);
+    e.innerHTML = `
+            <p>${missionLists[randomNum].pt}pt</p>
+            <p>${missionLists[randomNum].contents}</p>
+        `;
+}
 
 startMissionList();
 const changeBtn = document.querySelectorAll(".change_btn");
@@ -113,12 +119,14 @@ missionListBtn.forEach((e) => {
         e.classList.add("mission_complete");
         setTimeout(() => {
             e.classList.remove("mission_complete");
-        }, 700);
+            missionChange(e);
+        }, 1000);
     });
 });
 
 changeBtn.forEach((e) => {
     e.addEventListener("click", () => {
-        console.log(e);
+        const childEle = e.parentElement.querySelector("div");
+        missionChange(childEle);
     });
 });
