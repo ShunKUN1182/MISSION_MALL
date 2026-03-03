@@ -112,7 +112,12 @@ startMissionList();
 const changeBtn = document.querySelectorAll(".change_btn");
 const missionListBtn = document.querySelectorAll(".mission_list");
 const myPoint = document.querySelector("#myPoint");
+const maxScoreInput = document.querySelector("#maxScoreInput");
+const maxScore = 20;
+let pointCounter = 0;
 console.log(changeBtn);
+
+maxScoreInput.textContent = maxScore;
 
 missionListBtn.forEach((e) => {
     let count = 0;
@@ -121,7 +126,15 @@ missionListBtn.forEach((e) => {
             return;
         }
         count = 1;
-        console.log(e, ele);
+        let pointNum = e.querySelector("p").textContent;
+        pointNum = pointNum.split("p");
+        pointNum = Number(pointNum[0]);
+        pointCounter += pointNum;
+        console.log(pointCounter);
+        myPoint.textContent = pointCounter;
+        if (pointCounter >= maxScore) {
+            alert("ゲーム終了だよ！");
+        }
         e.classList.add("mission_complete");
         setTimeout(() => {
             e.classList.remove("mission_complete");
