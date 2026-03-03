@@ -57,3 +57,23 @@
         }
     }
 }
+
+.rink_btn{
+    margin: 32px 30px;
+    height: 42px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--grayColor);
+    background-color: var(--bgColor);
+    color: var(--grayColor);
+    h3{
+        font-size: 1.4rem;
+        letter-spacing: 0.2rem;
+    }
+    &:hover{
+        background-color: var(--whiteColor);
+        color: var(--textboxColor);
+    }
+}
