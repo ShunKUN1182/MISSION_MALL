@@ -1,12 +1,17 @@
 const startBtn = document.querySelector(".start_trigger");
 const overlay = document.querySelector(".overlay");
+const body = document.body;
 
 startBtn.addEventListener("click" ,(e)=>{
     e.preventDefault();
 
     overlay.classList.add("active");
 
-    setInterval(()=>{
+    // setTimeout(()=>{
+    //     body.classList.add("fade_out");
+    // } ,1800);
+
+    setTimeout(()=>{
         window.location.href = "mission.html";
-    } ,2000)
+    } ,2000);
 })
