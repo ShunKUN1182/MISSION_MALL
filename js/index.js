@@ -1,12 +1,11 @@
 const btns = document.querySelectorAll(".btn");
 const modal = document.querySelector(".modal");
 const backBtn = document.querySelector("#backBtn");
-
-console.log(btns);
+const radioIcon = document.querySelectorAll("label");
+const codeName = document.querySelector("#codeName");
 
 btns.forEach((e) => {
     e.addEventListener("click", (event) => {
-        // console.log("foo");
         event.preventDefault();
         modal.style.display = "flex";
     });
@@ -14,4 +13,16 @@ btns.forEach((e) => {
 
 backBtn.addEventListener("click", () => {
     modal.style.display = "none";
+});
+
+radioIcon.forEach((e) => {
+    e.addEventListener("click", () => {
+        const iconImgPass = e.querySelector("img").getAttribute("src");
+        localStorage.setItem("imgPass", iconImgPass);
+    });
+});
+
+codeName.addEventListener("change", () => {
+    // console.log(codeName.value);
+    localStorage.setItem("codeName", codeName.value);
 });
