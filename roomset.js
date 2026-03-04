@@ -1,5 +1,6 @@
 const startBtn = document.querySelector(".start_trigger");
 const overlay = document.querySelector(".overlay");
+const returnBtn = document.querySelector(".returm_btn");
 const body = document.body;
 
 startBtn.addEventListener("click" ,(e)=>{
@@ -12,6 +13,10 @@ startBtn.addEventListener("click" ,(e)=>{
     // } ,1800);
 
     setTimeout(()=>{
-        window.location.href = "mission.html";
+    window.location.href = "mission.html";
     } ,2000);
+})
+
+returnBtn.addEventListener("click",()=>{
+    window.location.href = "index.html";
 })

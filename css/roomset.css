@@ -114,6 +114,9 @@
                 box-shadow: 4px 6px 0 var(--blockColor);
                 border:  1px solid var(--blockColor);
                 transition: 0.2s;
+                &:hover{
+                    background-color: var(--textboxColor);
+                }
                 .num{
                     font-size: 2.4rem;
                     font-weight: bold;
