@@ -1,7 +1,7 @@
 h1 {
     color: var(--goodColor);
     padding: 10px 40px;
-    border-radius: 16px;
+    border-radius: 40px;
     border: solid 3px var(--goodColor);
     margin: 30px;
     width: 140px;
@@ -10,25 +10,77 @@ h1 {
 
 .runking_box {
     display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+    margin-bottom: 64px;
     .silver_box {
+        h2 {
+            color: #c6c9db;
+        }
+    }
+    .gold_box {
+        color: #f5cf48;
+    }
+    .bronze_box {
+        color: #be6d2e;
+    }
+    .runk_box {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px solid tomato;
-        h2{
+        gap: 4px;
+        h2 {
             font-size: 1.8rem;
-            color: #A6A9BC;
         }
-        .silver_img{
-            width: 120px;
+        img {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .silver_img {
+            width: 100px;
             height: 78px;
             background-image: url(../img/silver.png);
             background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid skyblue;
+        }
+        .gold_img {
+            width: 100px;
+            height: 100px;
+            background-image: url(../img/gold.png);
+            background-position: center;
+        }
+        .bronze_img {
+            width: 100px;
+            height: 50px;
+            background-image: url(../img/bronze.png);
+            background-position: center;
+        }
+    }
+}
+
+.ranking_wrap {
+    margin: 0 30px;
+    .ranking_result {
+        display: flex;
+        background-color: var(--grayColor);
+        border-radius: 8px;
+        border: 3px solid #f5cf48;
+        padding: 12px;
+        h2 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+        img {
+            width: 32px;
+            height: 32px;
         }
     }
 }
