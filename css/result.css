@@ -9,6 +9,26 @@ h1 {
 }
 
 .runking_box {
+    display: flex;
     .silver_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid tomato;
+        h2{
+            font-size: 1.8rem;
+            color: #A6A9BC;
+        }
+        .silver_img{
+            width: 120px;
+            height: 78px;
+            background-image: url(../img/silver.png);
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid skyblue;
+        }
     }
 }
