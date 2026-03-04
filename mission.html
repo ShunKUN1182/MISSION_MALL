@@ -11,70 +11,36 @@
         <link rel="stylesheet" href="css/ress.css" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/mission.css" />
+        <script src="js/mission.js" defer></script>
     </head>
     <body>
         <header>
-            <h1>MISSION MALL</h1>
+            <h1><img src="img/logo.png" alt="" /></h1>
         </header>
         <main>
-            <div class="commander">
-                <div class="commander_text">
-                    <p>その調子で任務を遂行しろ！！</p>
+            <div class="overlay">
+                <div class="stamp_wrap">
+                    <div class="stamp_text">任務完了</div>
+                    <!-- <div class="result_btn">
+                    <a href="index.html">結果画面</a>
+                </div> -->
                 </div>
-                <picture class="commander_img">
-                    <img src="img/commander_img.svg" alt="" />
-                </picture>
             </div>
+
             <div class="mission">
                 <section class="mission_text">
                     <h2>ミッション</h2>
                 </section>
                 <ul class="mission_list_wrapper">
-                    <li class="mission_list_wrap">
-                        <div class="mission_list">
+                    <!-- <li class="mission_list_wrap">
+                        <div class="mission_list mission_complete">
                             <p>5pt</p>
                             <p>相手に帽子をかぶらせろ</p>
                         </div>
                         <div class="change_btn">
                             <img src="img/arrow_icon.svg" alt="" />
                         </div>
-                    </li>
-                    <li class="mission_list_wrap">
-                        <div class="mission_list">
-                            <p>5pt</p>
-                            <p>相手に帽子をかぶらせろ</p>
-                        </div>
-                        <div class="change_btn">
-                            <img src="img/arrow_icon.svg" alt="" />
-                        </div>
-                    </li>
-                    <li class="mission_list_wrap">
-                        <div class="mission_list">
-                            <p>5pt</p>
-                            <p>相手に帽子をかぶらせろ</p>
-                        </div>
-                        <div class="change_btn">
-                            <img src="img/arrow_icon.svg" alt="" />
-                        </div>
-                    </li>
-                    <li class="mission_list_wrap">
-                        <div class="mission_list">
-                            <p>5pt</p>
-                            <p>相手に帽子をかぶらせろ</p>
-                        </div>
-                        <div class="change_btn">
-                            <img src="img/arrow_icon.svg" alt="" />
-                        </div>
-                    </li>
-                    <li class="mission_list_wrap">
-                        <div class="mission_list">
-                            <p>5pt</p>
-                            <p>相手に帽子をかぶらせろ</p>
-                        </div>
-                        <div class="change_btn">
-                            <img src="img/arrow_icon.svg" alt="" />
-                        </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="card">
@@ -85,15 +51,15 @@
                     <div class="character_name">
                         <section class="name">
                             <p>Name：</p>
-                            <h3>とわほそかわ</h3>
+                            <h3 id="inputCodeName">とわほそかわ</h3>
                         </section>
                         <section class="point">
                             <p>Point：</p>
-                            <h3><span>10</span> pt</h3>
+                            <h3><span id="myPoint">0</span> pt</h3>
                         </section>
                         <section class="max_score">
                             <p>scoring the first：</p>
-                            <h3><span>20</span> pt</h3>
+                            <h3><span id="maxScoreInput">20</span> pt</h3>
                         </section>
                     </div>
                     <picture class="character_img">

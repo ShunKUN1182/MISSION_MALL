@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&family=Oswald:wght@329&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sawarabi+Mincho&family=Yuji+Mai&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/ress.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/roomset.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <script defer src="js/roomset.js"></script>
+    </head>
+    <body>
+        <div class="overlay">
+            <div class="stamp_text">ゲーム開始</div>
+        </div>
+        <header>
+            <div class="room_text_wrap">
+                <div class="returm_btn">
+                    <span class="material-icons"> arrow_back_ios </span>
+                </div>
+                <h1>ルーム作成</h1>
+            </div>
+        </header>
+        <main>
+            <div class="room_id_box">
+                <div class="room_id_wrap">
+                    <div class="room_id_text">
+                        <h2>ルームID</h2>
+                        <span class="material-icons"> content_copy </span>
+                    </div>
+                    <div class="id_number_wrap">
+                        <input type="text" maxlength="1" value="6" readonly />
+                        <input type="text" maxlength="1" value="8" readonly />
+                        <input type="text" maxlength="1" value="0" readonly />
+                        <input type="text" maxlength="1" value="9" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="rink_btn">
+                <h3>友達を招待</h3>
+            </div>
+            <div class="pt_box">
+                <div class="pt_wrap">
+                    <h3>目標ポイント設定</h3>
+                    <div class="pt_btn_wrap">
+                        <input type="radio" name="pt" value="5pt" id="pt5" />
+                        <label for="pt5">
+                            <span class="num">5</span>
+                            <span class="unit">pt</span>
+                        </label>
+
+                        <input type="radio" name="pt" value="10pt" id="pt10" />
+                        <label for="pt10">
+                            <span class="num">10</span>
+                            <span class="unit">pt</span>
+                        </label>
+
+                        <input type="radio" name="pt" value="15pt" id="pt15" />
+                        <label for="pt15">
+                            <span class="num">15</span>
+                            <span class="unit">pt</span>
+                        </label>
+                    </div>
+                    <p>先に<span>5</span>ptを取得したプレイヤーが勝利</p>
+                </div>
+            </div>
+            <div class="people_box">
+                <div class="people_wrap">
+                    <div class="icon_wrap">
+                        <p class="icon_img"><img src="img/chara_icon1.png" alt="" /></p>
+                        <p class="icon_img"><img src="img/chara_icon2.png" alt="" /></p>
+                        <p class="icon_img"><img src="img/chara_icon3.png" alt="" /></p>
+                        <p class="icon_img"><img src="img/chara_icon4.png" alt="" /></p>
+                    </div>
+                    <h3><span>4</span>人参加中</h3>
+                </div>
+            </div>
+            <div class="start_btn start_trigger">
+                <a href="mission.html">ゲーム開始</a>
+            </div>
+        </main>
+    </body>
+</html>
